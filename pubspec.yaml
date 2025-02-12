@@ -1,0 +1,94 @@
+name: flutter_ecommerce_2025
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+# PACKAGES
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Utility Packages
+  http: ^1.3.0
+  logger: ^2.5.0
+  intl: ^0.20.2
+  url_launcher: ^6.3.1
+  flutter_native_splash: ^2.4.4
+  flutter_bloc: ^9.0.0
+  flutter_screenutil: ^5.9.3
+  gap: ^3.0.1
+  flutter_svg: ^2.0.17
+  go_router: ^14.7.2
+  smooth_page_indicator: ^1.2.0+3
+
+  # State Management
+  get: ^4.6.6
+  get_storage: ^2.1.1
+
+  # Icon
+  cupertino_icons: ^1.0.8
+  iconsax_flutter: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter_native_splash:
+  image: assets/logos/t-store-splash-logo-white.png
+  image_dark: assets/logos/t-store-splash-logo-black.png
+  color: "#FFFFFF"
+  color_dark: "#272727"
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#272727"
+    image: assets/logos/t-store-splash-logo-white.png
+    image_dark: assets/logos/t-store-splash-logo-black.png
+
+  web: false
+
+flutter:
+  uses-material-design: true
+
+  # Local Assets
+  assets:
+    - assets/logos/
+    - assets/icons/brands/
+    - assets/images/content/
+    - assets/images/banners/
+    - assets/images/reviews/
+    - assets/images/products/
+    - assets/icons/categories/
+    - assets/images/animations/
+    - assets/icons/payment_methods/
+    - assets/images/on_boarding_images/
+
+  # Local Fonts
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-SemiBoldItalic.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-BoldItalic.ttf
+          weight: 700
