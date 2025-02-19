@@ -65,7 +65,7 @@ class VerifiyEmailScreen extends StatelessWidget {
                   onPressed: () {
                     context.push(RouterName.successScreen);
                   },
-                  child: Text(TTexts.tContinue),
+                  child: const Text(TTexts.tContinue),
                 ),
               ),
               Gap(TSizes.spaceBtwItems.h / 2),
@@ -75,7 +75,7 @@ class VerifiyEmailScreen extends StatelessWidget {
                   onPressed: () {
                     context.go(RouterName.loginScreen);
                   },
-                  child: Text(TTexts.resendEmail),
+                  child: const Text(TTexts.resendEmail),
                 ),
               ),
             ],

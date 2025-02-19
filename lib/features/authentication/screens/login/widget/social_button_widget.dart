@@ -12,7 +12,7 @@ class SocialButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget _buildButtonSocial(BuildContext context, String image,
+    Widget buildButtonSocial(BuildContext context, String image,
         {VoidCallback? onPressed}) {
       return Container(
         decoration: BoxDecoration(
@@ -33,9 +33,9 @@ class SocialButtonWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButtonSocial(context, TImages.google, onPressed: () {}),
+        buildButtonSocial(context, TImages.google, onPressed: () {}),
         Gap(TSizes.spaceBtwItems.w),
-        _buildButtonSocial(context, TImages.facebook, onPressed: () {}),
+        buildButtonSocial(context, TImages.facebook, onPressed: () {}),
       ],
     );
   }

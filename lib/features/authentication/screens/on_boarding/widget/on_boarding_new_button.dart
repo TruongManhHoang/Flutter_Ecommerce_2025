@@ -19,10 +19,11 @@ class OnBoardingNewButton extends StatelessWidget {
       child: ElevatedButton(
           onPressed: () async {
             await controller.nextPage(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               curve: Curves.easeInOut,
             );
-            Future.delayed(Duration(milliseconds: 500), () {
+            Future.delayed(const Duration(milliseconds: 500), () {
+              // ignore: use_build_context_synchronously
               context.go(RouterName.loginScreen);
             });
           },
@@ -30,7 +31,7 @@ class OnBoardingNewButton extends StatelessWidget {
             shape: const CircleBorder(),
             backgroundColor: Colors.black,
           ),
-          child: Icon(Icons.arrow_right)),
+          child: const Icon(Icons.arrow_right)),
     );
   }
 }

@@ -13,40 +13,45 @@ class TSearchContainer extends StatelessWidget {
     this.icon,
     this.showBackgound = true,
     this.showBorder = true,
+    this.onPressed,
+    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackgound, showBorder;
+  final VoidCallback? onPressed;
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: TSizes.defaultSpace,
-      ),
-      child: Container(
-        width: TDeviceUtils.getScreenHeight(context),
-        padding: EdgeInsets.all(TSizes.md),
-        decoration: BoxDecoration(
-            color: showBackgound
-                ? AppThemeBrightness.isDarkMode(context)
-                    ? TColors.dark
-                    : TColors.white
-                : Colors.transparent,
-            border: showBorder ? Border.all(color: TColors.grey) : null,
-            borderRadius: BorderRadius.circular(TSizes.cardRadiusLg)),
-        child: Row(
-          children: [
-            Icon(
-              icon,
-              color: TColors.dardGrey,
-            ),
-            Gap(TSizes.spaceBtwItems.w),
-            Text(
-              text,
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ],
+    return GestureDetector(
+      onTap: onPressed,
+      child: Padding(
+        padding: padding,
+        child: Container(
+          width: TDeviceUtils.getScreenHeight(context),
+          padding: const EdgeInsets.all(TSizes.md),
+          decoration: BoxDecoration(
+              color: showBackgound
+                  ? AppThemeBrightness.isDarkMode(context)
+                      ? TColors.dark
+                      : TColors.white
+                  : Colors.transparent,
+              border: showBorder ? Border.all(color: TColors.grey) : null,
+              borderRadius: BorderRadius.circular(TSizes.cardRadiusLg)),
+          child: Row(
+            children: [
+              Icon(
+                icon,
+                color: TColors.dardGrey,
+              ),
+              Gap(TSizes.spaceBtwItems.w),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ],
+          ),
         ),
       ),
     );

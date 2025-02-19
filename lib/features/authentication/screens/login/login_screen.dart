@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
               // Divider
               const TFormDividerWidget(dividerText: TTexts.orSignInWith),
               Gap(TSizes.spaceBtwSections.h),
-              SocialButtonWidget()
+              const SocialButtonWidget()
             ],
           ),
         ),
