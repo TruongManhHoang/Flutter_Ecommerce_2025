@@ -11,6 +11,9 @@ class RouterName {
   static const String onBoardingScreen = '/onBoardingScreen';
   static const String createAccount = '/createAccount';
   static const String loginScreen = '/loginScreen';
+  static const String homeScreen = '/homeScreen';
+  static const String productDetailScreen = '/productDetailScreen';
+  static const String profileScreen = '/profileScreen';
   static const String profile = '/profile';
   static const String setting = '/setting';
   static const String changePassword = '/change-password';

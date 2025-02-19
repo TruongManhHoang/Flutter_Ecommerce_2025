@@ -45,7 +45,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                   onPressed: () {
                     context.push(RouterName.resetPassword);
                   },
-                  child: Text(TTexts.submit)),
+                  child: const Text(TTexts.submit)),
             )
           ],
         ),

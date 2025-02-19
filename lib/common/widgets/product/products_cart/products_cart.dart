@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_2025/common/widgets/appbar/appbar.dart';
-import 'package:flutter_ecommerce_2025/common/widgets/container/primary_header_container.dart';
 import 'package:flutter_ecommerce_2025/utils/constants/colors.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
+// ignore: must_be_immutable
 class TCartCounterIcon extends StatelessWidget {
   TCartCounterIcon({
     super.key,
@@ -19,7 +18,7 @@ class TCartCounterIcon extends StatelessWidget {
           onPressed: () {},
           icon: Icon(
             Iconsax.shopping_bag,
-            color: TColors.white,
+            color: iconColor,
           )),
       Positioned(
         right: 0,

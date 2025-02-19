@@ -13,7 +13,7 @@ class CreateAccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget _buildTextFields(String hintText) {
+    Widget buildTextFields(String hintText) {
       return TextField(
         decoration: InputDecoration(
           focusedBorder: InputBorder.none,
@@ -29,7 +29,7 @@ class CreateAccountScreen extends StatelessWidget {
       );
     }
 
-    Widget _continueButton(BuildContext context, Function() onPressed) {
+    Widget continueButton(BuildContext context, Function() onPressed) {
       return BasicAppButton(
         onPressed: onPressed,
         title: 'Continue',
@@ -41,7 +41,7 @@ class CreateAccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_rounded),
+          icon: const Icon(Icons.arrow_back_ios_rounded),
           onPressed: () => context.go(RouterName.signin),
         ),
       ),
@@ -58,13 +58,13 @@ class CreateAccountScreen extends StatelessWidget {
                       ),
             ),
             Gap(20.h),
-            _buildTextFields('Email Address'),
+            buildTextFields('Email Address'),
             Gap(10.h),
-            _buildTextFields('Password'),
+            buildTextFields('Password'),
             Gap(10.h),
-            _buildTextFields('Confirm Password'),
+            buildTextFields('Confirm Password'),
             Gap(20.h),
-            _continueButton(context, () {})
+            continueButton(context, () {})
           ],
         ),
       ),

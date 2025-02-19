@@ -6,6 +6,9 @@ import 'package:flutter_ecommerce_2025/features/authentication/screens/login/log
 import 'package:flutter_ecommerce_2025/features/authentication/screens/on_boarding/onboarding.dart';
 import 'package:flutter_ecommerce_2025/features/authentication/screens/signup/signup_screen.dart';
 import 'package:flutter_ecommerce_2025/features/authentication/screens/verifiy_email/verifiy_email_screen.dart';
+import 'package:flutter_ecommerce_2025/features/personalization/screens/profile/profile.dart';
+import 'package:flutter_ecommerce_2025/features/shop/screens/home/home_screen.dart';
+import 'package:flutter_ecommerce_2025/features/shop/screens/product_details/product_detail.dart';
 import 'package:flutter_ecommerce_2025/features/splash/screens/splash.dart';
 import 'package:flutter_ecommerce_2025/navigation_menu.dart';
 import 'package:flutter_ecommerce_2025/utils/router/router_name.dart';
@@ -54,6 +57,18 @@ class AppRouter {
       GoRoute(
         path: RouterName.navigationMenu,
         builder: (context, state) => const NavigationMenu(),
+      ),
+      GoRoute(
+        path: RouterName.homeScreen,
+        builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: RouterName.profileScreen,
+        builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: RouterName.productDetailScreen,
+        builder: (context, state) => const ProductDetailScreen(),
       ),
     ],
     // redirect: (context,state) {

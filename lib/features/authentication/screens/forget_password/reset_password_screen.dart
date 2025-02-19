@@ -3,10 +3,8 @@ import 'package:flutter_ecommerce_2025/utils/constants/image_strings.dart';
 import 'package:flutter_ecommerce_2025/utils/constants/sizes.dart';
 import 'package:flutter_ecommerce_2025/utils/constants/text_strings.dart';
 import 'package:flutter_ecommerce_2025/utils/helpers/helper_functions.dart';
-import 'package:flutter_ecommerce_2025/utils/router/router_name.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
@@ -29,7 +27,7 @@ class ResetPasswordScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               // Image
@@ -62,7 +60,7 @@ class ResetPasswordScreen extends StatelessWidget {
                   onPressed: () {
                     // context.push(RouterName.successScreen);
                   },
-                  child: Text(TTexts.done),
+                  child: const Text(TTexts.done),
                 ),
               ),
               Gap(TSizes.spaceBtwItems.h / 2),
@@ -72,7 +70,7 @@ class ResetPasswordScreen extends StatelessWidget {
                   onPressed: () {
                     // context.go(RouterName.loginScreen);
                   },
-                  child: Text(TTexts.resendEmail),
+                  child: const Text(TTexts.resendEmail),
                 ),
               ),
             ],

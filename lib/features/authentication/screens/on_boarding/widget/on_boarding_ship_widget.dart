@@ -12,6 +12,6 @@ class OnBoardingSkipWidget extends StatelessWidget {
     return Positioned(
         top: TDeviceUtils.getAppBarHeight(),
         right: TSizes.defaultSpace,
-        child: TextButton(onPressed: () {}, child: Text('Skip')));
+        child: TextButton(onPressed: () {}, child: const Text('Skip')));
   }
 }

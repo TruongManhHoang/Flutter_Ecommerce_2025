@@ -16,7 +16,7 @@ class SignupFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget _buildFormField(
+    Widget buildFormField(
         BuildContext context, String labelText, IconData icon,
         {IconData? suffixIcon}) {
       return TextFormField(
@@ -34,28 +34,28 @@ class SignupFormWidget extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: _buildFormField(context, TTexts.firstName, Iconsax.user),
+              child: buildFormField(context, TTexts.firstName, Iconsax.user),
             ),
             Gap(TSizes.spaceBtwInputFields.w),
             Expanded(
-                child: _buildFormField(context, TTexts.lastName, Iconsax.user)),
+                child: buildFormField(context, TTexts.lastName, Iconsax.user)),
           ],
         ),
         Gap(TSizes.spaceBtwSections.h / 2),
         // Username
-        _buildFormField(context, TTexts.username, Iconsax.user_edit),
+        buildFormField(context, TTexts.username, Iconsax.user_edit),
 
         Gap(TSizes.spaceBtwSections.h / 2),
         // Email
-        _buildFormField(context, TTexts.email, Iconsax.direct),
+        buildFormField(context, TTexts.email, Iconsax.direct),
 
         Gap(TSizes.spaceBtwSections.h / 2),
         // Phone number
-        _buildFormField(context, TTexts.phoneNo, Iconsax.call),
+        buildFormField(context, TTexts.phoneNo, Iconsax.call),
 
         Gap(TSizes.spaceBtwSections.h / 2),
         // Password
-        _buildFormField(context, TTexts.password, Iconsax.password_check,
+        buildFormField(context, TTexts.password, Iconsax.password_check,
             suffixIcon: Iconsax.eye_slash),
 
         Gap(TSizes.spaceBtwSections.h),
@@ -85,7 +85,7 @@ class SignupFormWidget extends StatelessWidget {
                   text: '${TTexts.and} ',
                   style: Theme.of(context).textTheme.bodySmall),
               TextSpan(
-                  text: '${TTexts.termsOfUse}',
+                  text: TTexts.termsOfUse,
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppThemeBrightness.isDarkMode(context)
                             ? TColors.white
